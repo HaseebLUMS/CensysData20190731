@@ -4,7 +4,7 @@ import random
 def giveFileName():
 	token = 'censysData_0000000000'
 	# r = random.randint(0, 100)
-	for r in range(0, 2):
+	for r in range(0, 100):
 		r = str(r)
 		if len(r) == 1:
 			yield token + '0' + r + '.json'
