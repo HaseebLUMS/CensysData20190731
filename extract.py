@@ -4,7 +4,7 @@ import random
 def giveFileName():
 	token = 'censysData_0000000000'
 	# r = random.randint(0, 100)
-	for r in range(0, 50):
+	for r in range(0, 2):
 		r = str(r)
 		if len(r) == 1:
 			yield token + '0' + r + '.json'
@@ -34,6 +34,7 @@ def getIPs():
 			if ('ftpBanner' in ele) or ('telnetBanner' in ele):
 				if 'description' in ele:
 					ipDictionary[ele['ip']] = ele
+
 		except:
 			pass
 	ipDictionary = json.dumps(ipDictionary, indent=4)
